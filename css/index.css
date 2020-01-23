@@ -133,7 +133,45 @@ table {
 html,
 body {
   height: 100%;
+  font-size: 62.5%;
+  max-width: 100%;
+  border: 1px solid red;
 }
-body {
-  color: orange;
+.container {
+  font-size: 2rem;
+  margin: 0 auto;
+  width: 90%;
+}
+.container header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: cyan;
+}
+.container header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+}
+.container header nav a {
+  text-decoration: none;
+  color: gray;
+}
+.container header img {
+  height: 10%;
+  width: 10%;
+  border-radius: 60%;
+}
+.container section {
+  background: gray;
+}
+.container section .top-img {
+  display: flex;
+  justify-content: center;
+}
+.container section .top-img img {
+  margin: 2% 1%;
+  height: 30%;
+  width: 70%;
 }

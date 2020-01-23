@@ -54,10 +54,92 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	max-width: 100%;
+	border: 1px solid red;
+	
 }
 
-body {
-	color: orange;
+// fonts
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+
+// variables 
+
+@Cursive-font: 'ZCOOL QingKe HuangYou', cursive;
+
+//markins
+
+.flex-between(){
+	display:flex;
+	justify-content: space-between; 
 }
+
+
+.container{
+	font-size: 2rem;
+	margin: 0 auto; 
+	width: 90%;
+
+	header{
+		width: 100%;
+		.flex-between();
+		background: cyan;
+
+
+		nav{
+			.flex-between(); 
+			width: 80%;  
+			align-items:center;
+
+
+			a{
+				text-decoration:none;
+				color: gray;
+			}// this closes anchor tags
+			
+
+		}// this closes nav
+
+		img{
+			height: 10%;
+			width: 10%;
+			border-radius: 60%; 
+
+		}// this closes img
+
+
+	}// this closes header
+
+	section{
+
+		background: gray;
+	
+		.Einstein-title{
+			
+			h1{
+				font-size: 3rem;
+				font-family: @Cursie-font; 
+				text-align: center;
+				}//this closes h1
+		}// this closes Einstein-title
+
+		.top-img{
+			display:flex; 
+			justify-content:center; 
+			img{
+				margin: 2% 1%;
+				height: 30%; 
+				width: 70%; 
+			}// this closes img
+			
+		}// this closes class .top-img
+
+
+
+
+	}//this closes section
+
+}// this closes container
+
 
