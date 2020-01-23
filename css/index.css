@@ -176,7 +176,7 @@ body {
   font-size: 5rem;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 .container section .top-img {
   display: flex;
@@ -203,12 +203,18 @@ body {
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   padding: 2%;
 }
-.container section .middle-content .Works-title h1 {
+.container section .Works-title h1 {
   font-size: 5rem;
   font-family: 'ZCOOL QingKe HuangYou', cursive;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 10%;
 }
-.container section .middle-content .middle-text {
+.container section .middle-text {
   display: flex;
+  justify-content: space-between;
+}
+.container section .middle-text h2 {
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  padding: 2%;
 }

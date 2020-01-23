@@ -74,6 +74,14 @@ html, body {
 	justify-content: space-between; 
 }
 
+.header-setting(){
+	font-size: 5rem;
+	font-family: @Cursive-font; 
+	text-align: center;
+	padding-top: 10%;
+
+}
+
 
 .container{
 	font-size: 2rem;
@@ -117,10 +125,7 @@ html, body {
 		.Einstein-title{
 			
 			h1{
-				font-size: 5rem;
-				font-family: @Cursive-font; 
-				text-align: center;
-				padding-top: 5%;
+				.header-setting();
 
 				}//this closes h1
 		}// this closes Einstein-title
@@ -156,53 +161,29 @@ html, body {
 
 		}//this closes top-text
 
-		.middle-content{
-
-			.Works-title{
-				h1{
-				font-size: 5rem;
-				font-family: @Cursive-font; 
-				text-align: center;
-				padding-top: 5%;
-				}//this closes h1
-
-			}//this closes works title
-
-			.middle-text{
-				display:flex;
-
-			}
-
-
-
-		}// this closes middle content
-
 		.Works-title{
+
 			h1{
-			font-size: 5rem;
-			font-family: @Cursive-font; 
-			text-align: center;
-			padding-top: 5%;
+				.header-setting();
+
+				}// this closes h1
+		}//this closes works title
+
+		.middle-text{
+			.flex-between();
+
+			h2{
+				text-align: center;
+				font-family: @Cursive-font; 
+				padding: 2%;
 			}
+
+		}// this closes middle text
 
 	}//this closes section
 
 
-	@media (max-width: 500px){
 
-
-
-
-
-
-
-
-
-
-
-
-
-	}
 
 }// this closes container
 
