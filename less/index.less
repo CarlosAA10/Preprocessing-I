@@ -62,9 +62,9 @@ html, body {
 
 // fonts
 @import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px|ZCOOL+QingKe+HuangYou&display=swap');
 // variables 
-
+@Slabo-font:'Slabo 27px', serif;
 @Cursive-font: 'ZCOOL QingKe HuangYou', cursive;
 
 //markins
@@ -79,7 +79,12 @@ html, body {
 	font-family: @Cursive-font; 
 	text-align: center;
 	padding-top: 10%;
+}
 
+.media-setting(){
+	display:flex;
+	flex-direction:column;
+	align-items:center;
 }
 
 
@@ -159,12 +164,17 @@ html, body {
 				padding: 2%;
 			}
 
+			p{
+				font-family: @Slabo-font;
+			}
+
 		}//this closes top-text
 
 		.Works-title{
 
 			h1{
 				.header-setting();
+				padding: 5%;
 
 				}// this closes h1
 		}//this closes works title
@@ -176,9 +186,58 @@ html, body {
 				text-align: center;
 				font-family: @Cursive-font; 
 				padding: 2%;
+			}// this closes h2
+
+			img{ 
+				height: 50%; 
+				width: 80%; 
+			}// this closes img
+
+			div{
+				width: 50%;
 			}
 
+			p{
+				font-family: @Slabo-font;
+			}
+
+
 		}// this closes middle text
+
+		.Contact-title{
+
+			h1{
+				.header-setting();
+			}// this closes h1
+		}// this closes contact title
+
+		@media (max-width: 500px){
+
+			.top-text{
+				.media-setting();
+
+				
+			}// this closes .toptext
+
+			.middle-text{
+				.media-setting();
+
+			}
+
+			.bottom-content{
+
+				form{
+					display:flex; 
+					flex-direction:center;
+				}
+			}
+
+
+
+
+
+
+		}// this closes media query
 
 	}//this closes section
 
