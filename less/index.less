@@ -57,7 +57,6 @@ html, body {
 	height: 100%;
 	font-size: 62.5%;
 	max-width: 100%;
-	border: 1px solid red;
 	
 }
 
@@ -118,9 +117,11 @@ html, body {
 		.Einstein-title{
 			
 			h1{
-				font-size: 3rem;
-				font-family: @Cursie-font; 
+				font-size: 5rem;
+				font-family: @Cursive-font; 
 				text-align: center;
+				padding-top: 5%;
+
 				}//this closes h1
 		}// this closes Einstein-title
 
@@ -135,10 +136,73 @@ html, body {
 			
 		}// this closes class .top-img
 
+		.top-text{
+			.flex-between();
+
+			div{
+				width: 50%;
+			}
+
+			ul{
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+
+			h2{
+				text-align: center;
+				font-family: @Cursive-font; 
+				padding: 2%;
+			}
+
+		}//this closes top-text
+
+		.middle-content{
+
+			.Works-title{
+				h1{
+				font-size: 5rem;
+				font-family: @Cursive-font; 
+				text-align: center;
+				padding-top: 5%;
+				}//this closes h1
+
+			}//this closes works title
+
+			.middle-text{
+				display:flex;
+
+			}
 
 
+
+		}// this closes middle content
+
+		.Works-title{
+			h1{
+			font-size: 5rem;
+			font-family: @Cursive-font; 
+			text-align: center;
+			padding-top: 5%;
+			}
 
 	}//this closes section
+
+
+	@media (max-width: 500px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
 
 }// this closes container
 

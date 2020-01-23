@@ -135,7 +135,13 @@ body {
   height: 100%;
   font-size: 62.5%;
   max-width: 100%;
-  border: 1px solid red;
+}
+@font-face {
+  font-family: 'ZCOOL QingKe HuangYou';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
 }
 .container {
   font-size: 2rem;
@@ -166,6 +172,12 @@ body {
 .container section {
   background: gray;
 }
+.container section .Einstein-title h1 {
+  font-size: 5rem;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  text-align: center;
+  padding-top: 5%;
+}
 .container section .top-img {
   display: flex;
   justify-content: center;
@@ -174,4 +186,29 @@ body {
   margin: 2% 1%;
   height: 30%;
   width: 70%;
+}
+.container section .top-text {
+  display: flex;
+  justify-content: space-between;
+}
+.container section .top-text div {
+  width: 50%;
+}
+.container section .top-text ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.container section .top-text h2 {
+  text-align: center;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  padding: 2%;
+}
+.container section .middle-content .Works-title h1 {
+  font-size: 5rem;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  text-align: center;
+  padding-top: 5%;
+}
+.container section .middle-content .middle-text {
+  display: flex;
 }
