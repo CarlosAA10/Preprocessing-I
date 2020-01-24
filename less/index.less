@@ -54,6 +54,196 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+	max-width: 100%;
+	
 }
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px|ZCOOL+QingKe+HuangYou&display=swap');
+// variables 
+@Slabo-font:'Slabo 27px', serif;
+@Cursive-font: 'ZCOOL QingKe HuangYou', cursive;
+
+//markins
+
+.flex-between(){
+	display:flex;
+	justify-content: space-between; 
+}
+
+.header-setting(){
+	font-size: 5rem;
+	font-family: @Cursive-font; 
+	text-align: center;
+	padding-top: 10%;
+}
+
+.media-setting(){
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+
+.container{
+	font-size: 2rem;
+	margin: 0 auto; 
+	width: 90%;
+
+	header{
+		width: 100%;
+		.flex-between();
+		background: cyan;
+
+
+		nav{
+			.flex-between(); 
+			width: 80%;  
+			align-items:center;
+
+
+			a{
+				text-decoration:none;
+				color: gray;
+			}// this closes anchor tags
+			
+
+		}// this closes nav
+
+		img{
+			height: 10%;
+			width: 10%;
+			border-radius: 60%; 
+
+		}// this closes img
+
+
+	}// this closes header
+
+	section{
+
+		background: gray;
+	
+		.Einstein-title{
+			
+			h1{
+				.header-setting();
+
+				}//this closes h1
+		}// this closes Einstein-title
+
+		.top-img{
+			display:flex; 
+			justify-content:center; 
+			img{
+				margin: 2% 1%;
+				height: 30%; 
+				width: 70%; 
+			}// this closes img
+			
+		}// this closes class .top-img
+
+		.top-text{
+			.flex-between();
+
+			div{
+				width: 50%;
+			}
+
+			ul{
+				list-style-type: disc;
+				list-style-position: inside;
+			}
+
+			h2{
+				text-align: center;
+				font-family: @Cursive-font; 
+				padding: 2%;
+			}
+
+			p{
+				font-family: @Slabo-font;
+			}
+
+		}//this closes top-text
+
+		.Works-title{
+
+			h1{
+				.header-setting();
+				padding: 5%;
+
+				}// this closes h1
+		}//this closes works title
+
+		.middle-text{
+			.flex-between();
+
+			h2{
+				text-align: center;
+				font-family: @Cursive-font; 
+				padding: 2%;
+			}// this closes h2
+
+			img{ 
+				height: 50%; 
+				width: 80%; 
+			}// this closes img
+
+			div{
+				width: 50%;
+			}
+
+			p{
+				font-family: @Slabo-font;
+			}
+
+
+		}// this closes middle text
+
+		.Contact-title{
+
+			h1{
+				.header-setting();
+			}// this closes h1
+		}// this closes contact title
+
+		@media (max-width: 500px){
+
+			.top-text{
+				.media-setting();
+
+				
+			}// this closes .toptext
+
+			.middle-text{
+				.media-setting();
+
+			}
+
+			.bottom-content{
+
+				form{
+					display:flex; 
+					flex-direction:center;
+				}
+			}
+
+
+
+
+
+
+		}// this closes media query
+
+	}//this closes section
+
+
+
+
+}// this closes container
+
 
