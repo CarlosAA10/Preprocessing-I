@@ -61,14 +61,14 @@ html, body {
 }
 
 // fonts
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px|ZCOOL+QingKe+HuangYou&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Source+Code+Pro&display=swap');
 // variables 
-@Slabo-font:'Slabo 27px', serif;
-@Cursive-font: 'ZCOOL QingKe HuangYou', cursive;
+@Kanye-font: 'Lacquer', sans-serif;
+@Pro-font: 'Source Code Pro', monospace;
+
 
 //markins
-
 .flex-between(){
 	display:flex;
 	justify-content: space-between; 
@@ -76,7 +76,6 @@ html, body {
 
 .header-setting(){
 	font-size: 5rem;
-	font-family: @Cursive-font; 
 	text-align: center;
 	padding-top: 10%;
 }
@@ -86,17 +85,29 @@ html, body {
 	flex-direction:column;
 	align-items:center;
 }
-
+//code starts here // 
 
 .container{
 	font-size: 2rem;
 	margin: 0 auto; 
-	width: 90%;
+	width: 85%;
+
+	.yeezus-logo{
+		display:flex; 
+		justify-content: center; 
+		background-image: url('https://lh3.googleusercontent.com/proxy/CJk7yx8L4K1FvyC-037_yN_E-z9MIkZpCfLAEij1Rl1AIiFIeUpEBaSdTsFsnvQqTzv8aYVxAvsLHaLVD9aiVCjlomhVYKCG7pTxfvSilD-9dTayr4XFIDA_Xusk7OvD3Piy1JYnBMQ4AMRQYXOWfwBOVTaEuy8');
+		margin-bottom: 3%; 
+
+		img{
+			width: 20%; 
+		}// this closes img
+
+	}// this closes yeezus-logo
 
 	header{
 		width: 100%;
 		.flex-between();
-		background: cyan;
+		background:orangered;
 
 
 		nav{
@@ -107,7 +118,7 @@ html, body {
 
 			a{
 				text-decoration:none;
-				color: gray;
+				color: black;
 			}// this closes anchor tags
 			
 
@@ -123,86 +134,25 @@ html, body {
 
 	}// this closes header
 
-	section{
+	.Top-kanye{
+		font-size: 5rem; 
+		font-family: @Kanye-font; 
+		display:flex; 
+		align-items: center;
+		flex-direction:column; 
+		padding: 10% 0; 
+		background-color: beige;
+		img{
+			width: 70%; 
+		}
 
-		background: gray;
+		p{
+			font-size: 2rem;
+			font-family: @Pro-font; 
+		}
+	}
 	
-		.Einstein-title{
-			
-			h1{
-				.header-setting();
-
-				}//this closes h1
-		}// this closes Einstein-title
-
-		.top-img{
-			display:flex; 
-			justify-content:center; 
-			img{
-				margin: 2% 1%;
-				height: 30%; 
-				width: 70%; 
-			}// this closes img
-			
-		}// this closes class .top-img
-
-		.top-text{
-			.flex-between();
-
-			div{
-				width: 50%;
-			}
-
-			ul{
-				list-style-type: disc;
-				list-style-position: inside;
-			}
-
-			h2{
-				text-align: center;
-				font-family: @Cursive-font; 
-				padding: 2%;
-			}
-
-			p{
-				font-family: @Slabo-font;
-			}
-
-		}//this closes top-text
-
-		.Works-title{
-
-			h1{
-				.header-setting();
-				padding: 5%;
-
-				}// this closes h1
-		}//this closes works title
-
-		.middle-text{
-			.flex-between();
-
-			h2{
-				text-align: center;
-				font-family: @Cursive-font; 
-				padding: 2%;
-			}// this closes h2
-
-			img{ 
-				height: 50%; 
-				width: 80%; 
-			}// this closes img
-
-			div{
-				width: 50%;
-			}
-
-			p{
-				font-family: @Slabo-font;
-			}
-
-
-		}// this closes middle text
+	// this starts the sections
 
 		.Contact-title{
 
@@ -228,7 +178,7 @@ html, body {
 
 				form{
 					display:flex; 
-					flex-direction:center;
+					justify-content:center;
 				}
 			}
 
@@ -239,7 +189,7 @@ html, body {
 
 		}// this closes media query
 
-	}//this closes section
+
 
 
 
