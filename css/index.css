@@ -135,6 +135,7 @@ body {
   height: 100%;
   font-size: 62.5%;
   max-width: 100%;
+  background-image: url('https://i.redd.it/wq719omdggg21.jpg');
 }
 @font-face {
   font-family: 'Lacquer';
@@ -200,6 +201,7 @@ body {
   flex-direction: column;
   padding: 10% 0;
   background-color: beige;
+  margin-bottom: 3%;
 }
 .container .Top-kanye img {
   width: 70%;
@@ -207,6 +209,36 @@ body {
 .container .Top-kanye p {
   font-size: 2rem;
   font-family: 'Source Code Pro', monospace;
+}
+.container .kanye-info {
+  border: 1px solid red;
+  background-color: lightblue;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 3%;
+}
+.container .kanye-info div {
+  width: 40%;
+  margin-bottom: 4%;
+  line-height: 2.5rem;
+}
+.container .kanye-info div:hover {
+  width: 45%;
+}
+.container .kanye-info div:hover h1 {
+  font-size: 2rem;
+}
+.container .kanye-info div h1 {
+  font-family: 'Lacquer', sans-serif;
+}
+.container .kanye-info div img {
+  border: 2px solid black;
+  width: 80%;
+}
+.container .bottom-content {
+  background-color: orangered;
 }
 .container .Contact-title h1 {
   font-size: 5rem;

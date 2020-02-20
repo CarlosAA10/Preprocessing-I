@@ -57,6 +57,7 @@ html, body {
 	height: 100%;
 	font-size: 62.5%;
 	max-width: 100%;
+	background-image: url('https://i.redd.it/wq719omdggg21.jpg'); 
 	
 }
 
@@ -142,17 +143,54 @@ html, body {
 		flex-direction:column; 
 		padding: 10% 0; 
 		background-color: beige;
+		margin-bottom: 3%; 
+
 		img{
 			width: 70%; 
-		}
+		}// this closes img
 
 		p{
 			font-size: 2rem;
 			font-family: @Pro-font; 
+		}// this closes p
+	}// this closes .Top-kanye
+
+	.kanye-info{
+		border: 1px solid red; 
+		background-color: lightblue;
+		display:flex; 
+		justify-content: space-around;
+		flex-wrap: wrap; 
+		align-items: baseline;
+		margin-bottom:3%;
+		div{
+			width: 40%;
+			margin-bottom: 4%;
+			line-height: 2.5rem;
+
+			&:hover{
+				width: 45%;
+
+				h1{
+					font-size: 2rem;
+				}
+			}
+
+			h1{
+				font-family: @Kanye-font; 
+			}
+
+			img{
+				border: 2px solid black;
+				width: 80%; 
+			}
+
 		}
 	}
-	
-	// this starts the sections
+
+		.bottom-content{
+			background-color: orangered;
+		}
 
 		.Contact-title{
 
