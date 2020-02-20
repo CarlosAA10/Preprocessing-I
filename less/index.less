@@ -32,9 +32,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -62,23 +59,30 @@ html, body {
 }
 
 // fonts
+
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lacquer|Source+Code+Pro&display=swap');
+
+
 // variables 
 @Kanye-font: 'Lacquer', sans-serif;
 @Pro-font: 'Source Code Pro', monospace;
 
 
-//markins
+//mixins
 .flex-between(){
 	display:flex;
 	justify-content: space-between; 
+}
+.flex-column(){
+	display:flex; 
+	flex-direction: column; 
 }
 
 .header-setting(){
 	font-size: 5rem;
 	text-align: center;
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 .media-setting(){
@@ -101,6 +105,11 @@ html, body {
 
 		img{
 			width: 20%; 
+
+			@media (max-width: 500px){
+				width: 40%;
+			}// this closes media query inside img
+
 		}// this closes img
 
 	}// this closes yeezus-logo
@@ -110,16 +119,31 @@ html, body {
 		.flex-between();
 		background:orangered;
 
+		@media (max-width: 500px){
+			margin-top: 3%;
+			.media-setting(); 
+		}// this closes media query inside of header
 
 		nav{
 			.flex-between(); 
 			width: 80%;  
 			align-items:center;
 
+			@media (max-width: 500px){
+				display:flex; 
+				flex-direction: column;
+			}//This closes the media query inside of nav
 
 			a{
+				margin: 3% 0; 
 				text-decoration:none;
 				color: black;
+
+				&:hover{
+					color: orange; 
+					font-size: 3rem;
+				}// this closes &:hover
+
 			}// this closes anchor tags
 			
 
@@ -130,100 +154,115 @@ html, body {
 			width: 10%;
 			border-radius: 60%; 
 
+			@media (max-width: 500px){
+				width: 50%;
+			}// this closes media query inside of img
+
 		}// this closes img
 
 
 	}// this closes header
 
 	.Top-kanye{
+		.media-setting();
 		font-size: 5rem; 
 		font-family: @Kanye-font; 
-		display:flex; 
-		align-items: center;
-		flex-direction:column; 
 		padding: 10% 0; 
 		background-color: beige;
 		margin-bottom: 3%; 
 
 		img{
-			width: 70%; 
+			width: 70%;
+
+			@media (max-width: 500px){
+				width: 90%;
+			}
 		}// this closes img
 
 		p{
+			text-align:center;
 			font-size: 2rem;
 			font-family: @Pro-font; 
 		}// this closes p
+
 	}// this closes .Top-kanye
 
 	.kanye-info{
-		border: 1px solid red; 
 		background-color: lightblue;
 		display:flex; 
 		justify-content: space-around;
 		flex-wrap: wrap; 
 		align-items: baseline;
 		margin-bottom:3%;
+
+		@media (max-width: 500px){
+			.media-setting();
+		}// this closes media query inside of kanye-info
+
+
 		div{
 			width: 40%;
 			margin-bottom: 4%;
 			line-height: 2.5rem;
 
+			@media (max-width: 500px){
+				width: 70%;
+				.media-setting();
+			}// this closes media query inside of div
+
 			&:hover{
 				width: 45%;
 
+				@media (max-width: 500px){
+					width:70%;
+				}// this closes media query inside of &:hover
+
 				h1{
 					font-size: 2rem;
-				}
-			}
+				}//this closes h1
+
+			}//this closes &:hover
 
 			h1{
 				font-family: @Kanye-font; 
-			}
+			}// this closes h1
 
 			img{
-				border: 2px solid black;
 				width: 80%; 
-			}
 
-		}
-	}
+				@media (max-width: 500px){
+					width: 100%;
+				}// this closes media query inside of img
+
+			}// this closes img
+
+		}// this closes div
+
+	}// this closes kanye-info
 
 		.bottom-content{
 			background-color: orangered;
-		}
+		}// this closes .bottom-content
 
 		.Contact-title{
 
 			h1{
 				.header-setting();
 			}// this closes h1
+
 		}// this closes contact title
 
 		@media (max-width: 500px){
 
-			.top-text{
-				.media-setting();
-
-				
-			}// this closes .toptext
-
-			.middle-text{
-				.media-setting();
-
-			}
 
 			.bottom-content{
 
 				form{
 					display:flex; 
+					flex-direction: column;
 					justify-content:center;
-				}
-			}
-
-
-
-
-
+				}// this closes form 
+			}// this closes .bottom-content
 
 		}// this closes media query
 
