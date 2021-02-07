@@ -32,9 +32,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -57,28 +54,35 @@ html, body {
 	height: 100%;
 	font-size: 62.5%;
 	max-width: 100%;
+	background-image: url('https://i.redd.it/wq719omdggg21.jpg'); 
 	
 }
 
 // fonts
-@import url('https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px|ZCOOL+QingKe+HuangYou&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer|Source+Code+Pro&display=swap');
+
+
 // variables 
-@Slabo-font:'Slabo 27px', serif;
-@Cursive-font: 'ZCOOL QingKe HuangYou', cursive;
+@Kanye-font: 'Lacquer', sans-serif;
+@Pro-font: 'Source Code Pro', monospace;
 
-//markins
 
+//mixins
 .flex-between(){
 	display:flex;
 	justify-content: space-between; 
 }
+.flex-column(){
+	display:flex; 
+	flex-direction: column; 
+}
 
 .header-setting(){
 	font-size: 5rem;
-	font-family: @Cursive-font; 
 	text-align: center;
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 .media-setting(){
@@ -86,28 +90,60 @@ html, body {
 	flex-direction:column;
 	align-items:center;
 }
-
+//code starts here // 
 
 .container{
 	font-size: 2rem;
 	margin: 0 auto; 
-	width: 90%;
+	width: 85%;
+
+	.yeezus-logo{
+		display:flex; 
+		justify-content: center; 
+		background-image: url('https://lh3.googleusercontent.com/proxy/CJk7yx8L4K1FvyC-037_yN_E-z9MIkZpCfLAEij1Rl1AIiFIeUpEBaSdTsFsnvQqTzv8aYVxAvsLHaLVD9aiVCjlomhVYKCG7pTxfvSilD-9dTayr4XFIDA_Xusk7OvD3Piy1JYnBMQ4AMRQYXOWfwBOVTaEuy8');
+		margin-bottom: 3%; 
+
+		img{
+			width: 20%; 
+
+			@media (max-width: 500px){
+				width: 40%;
+			}// this closes media query inside img
+
+		}// this closes img
+
+	}// this closes yeezus-logo
 
 	header{
 		width: 100%;
 		.flex-between();
-		background: cyan;
+		background:orangered;
 
+		@media (max-width: 500px){
+			margin-top: 3%;
+			.media-setting(); 
+		}// this closes media query inside of header
 
 		nav{
 			.flex-between(); 
 			width: 80%;  
 			align-items:center;
 
+			@media (max-width: 500px){
+				display:flex; 
+				flex-direction: column;
+			}//This closes the media query inside of nav
 
 			a{
+				margin: 3% 0; 
 				text-decoration:none;
-				color: gray;
+				color: black;
+
+				&:hover{
+					color: orange; 
+					font-size: 3rem;
+				}// this closes &:hover
+
 			}// this closes anchor tags
 			
 
@@ -118,128 +154,119 @@ html, body {
 			width: 10%;
 			border-radius: 60%; 
 
+			@media (max-width: 500px){
+				width: 50%;
+			}// this closes media query inside of img
+
 		}// this closes img
 
 
 	}// this closes header
 
-	section{
+	.Top-kanye{
+		.media-setting();
+		font-size: 5rem; 
+		font-family: @Kanye-font; 
+		padding: 10% 0; 
+		background-color: beige;
+		margin-bottom: 3%; 
 
-		background: gray;
-	
-		.Einstein-title{
-			
-			h1{
-				.header-setting();
+		img{
+			width: 70%;
 
+			@media (max-width: 500px){
+				width: 90%;
+			}
+		}// this closes img
+
+		p{
+			text-align:center;
+			font-size: 2rem;
+			font-family: @Pro-font; 
+		}// this closes p
+
+	}// this closes .Top-kanye
+
+	.kanye-info{
+		background-color: lightblue;
+		display:flex; 
+		justify-content: space-around;
+		flex-wrap: wrap; 
+		align-items: baseline;
+		margin-bottom:3%;
+
+		@media (max-width: 500px){
+			.media-setting();
+		}// this closes media query inside of kanye-info
+
+
+		div{
+			width: 40%;
+			margin-bottom: 4%;
+			line-height: 2.5rem;
+
+			@media (max-width: 500px){
+				width: 70%;
+				.media-setting();
+			}// this closes media query inside of div
+
+			&:hover{
+				width: 45%;
+
+				@media (max-width: 500px){
+					width:70%;
+				}// this closes media query inside of &:hover
+
+				h1{
+					font-size: 2rem;
 				}//this closes h1
-		}// this closes Einstein-title
 
-		.top-img{
-			display:flex; 
-			justify-content:center; 
-			img{
-				margin: 2% 1%;
-				height: 30%; 
-				width: 70%; 
-			}// this closes img
-			
-		}// this closes class .top-img
-
-		.top-text{
-			.flex-between();
-
-			div{
-				width: 50%;
-			}
-
-			ul{
-				list-style-type: disc;
-				list-style-position: inside;
-			}
-
-			h2{
-				text-align: center;
-				font-family: @Cursive-font; 
-				padding: 2%;
-			}
-
-			p{
-				font-family: @Slabo-font;
-			}
-
-		}//this closes top-text
-
-		.Works-title{
+			}//this closes &:hover
 
 			h1{
-				.header-setting();
-				padding: 5%;
+				font-family: @Kanye-font; 
+			}// this closes h1
 
-				}// this closes h1
-		}//this closes works title
-
-		.middle-text{
-			.flex-between();
-
-			h2{
-				text-align: center;
-				font-family: @Cursive-font; 
-				padding: 2%;
-			}// this closes h2
-
-			img{ 
-				height: 50%; 
+			img{
 				width: 80%; 
+
+				@media (max-width: 500px){
+					width: 100%;
+				}// this closes media query inside of img
+
 			}// this closes img
 
-			div{
-				width: 50%;
-			}
+		}// this closes div
 
-			p{
-				font-family: @Slabo-font;
-			}
+	}// this closes kanye-info
 
-
-		}// this closes middle text
+		.bottom-content{
+			background-color: orangered;
+		}// this closes .bottom-content
 
 		.Contact-title{
 
 			h1{
 				.header-setting();
 			}// this closes h1
+
 		}// this closes contact title
 
 		@media (max-width: 500px){
 
-			.top-text{
-				.media-setting();
-
-				
-			}// this closes .toptext
-
-			.middle-text{
-				.media-setting();
-
-			}
 
 			.bottom-content{
 
 				form{
 					display:flex; 
-					flex-direction:center;
-				}
-			}
-
-
-
-
-
+					flex-direction: column;
+					justify-content:center;
+				}// this closes form 
+			}// this closes .bottom-content
 
 		}// this closes media query
 
-	}//this closes section
+
 
 
 

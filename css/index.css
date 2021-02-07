@@ -107,10 +107,6 @@ section {
 body {
   line-height: 1;
 }
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -135,38 +131,61 @@ body {
   height: 100%;
   font-size: 62.5%;
   max-width: 100%;
+  background-image: url('https://i.redd.it/wq719omdggg21.jpg');
 }
 @font-face {
-  font-family: 'ZCOOL QingKe HuangYou';
+  font-family: 'Lacquer';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+  src: local('Lacquer Regular'), local('Lacquer-Regular'), url(https://fonts.gstatic.com/s/lacquer/v1/EYqzma1QwqpG4_BBN7iKWg.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Slabo 27px';
+  font-family: 'Lacquer';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('Slabo 27px'), local('Slabo27px-Regular'), url(https://fonts.gstatic.com/s/slabo27px/v6/mFT0WbgBwKPR_Z4hGN2qgx8D0A.ttf) format('truetype');
+  src: local('Lacquer Regular'), local('Lacquer-Regular'), url(https://fonts.gstatic.com/s/lacquer/v1/EYqzma1QwqpG4_BBN7iKWg.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'ZCOOL QingKe HuangYou';
+  font-family: 'Source Code Pro';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local('ZCOOL QingKe HuangYou Regular'), local('ZCOOLQingKeHuangYou-Regular'), url(https://fonts.gstatic.com/s/zcoolqingkehuangyou/v5/2Eb5L_R5IXJEWhD3AOhSvFC554MOOahI4mR4jPe4.ttf) format('truetype');
+  src: local('Source Code Pro Regular'), local('SourceCodePro-Regular'), url(https://fonts.gstatic.com/s/sourcecodepro/v11/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevT.ttf) format('truetype');
 }
 .container {
   font-size: 2rem;
   margin: 0 auto;
-  width: 90%;
+  width: 85%;
+}
+.container .yeezus-logo {
+  display: flex;
+  justify-content: center;
+  background-image: url('https://lh3.googleusercontent.com/proxy/CJk7yx8L4K1FvyC-037_yN_E-z9MIkZpCfLAEij1Rl1AIiFIeUpEBaSdTsFsnvQqTzv8aYVxAvsLHaLVD9aiVCjlomhVYKCG7pTxfvSilD-9dTayr4XFIDA_Xusk7OvD3Piy1JYnBMQ4AMRQYXOWfwBOVTaEuy8');
+  margin-bottom: 3%;
+}
+.container .yeezus-logo img {
+  width: 20%;
+}
+@media (max-width: 500px) {
+  .container .yeezus-logo img {
+    width: 40%;
+  }
 }
 .container header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: cyan;
+  background: orangered;
+}
+@media (max-width: 500px) {
+  .container header {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .container header nav {
   display: flex;
@@ -174,97 +193,116 @@ body {
   width: 80%;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .container header nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .container header nav a {
+  margin: 3% 0;
   text-decoration: none;
-  color: gray;
+  color: black;
+}
+.container header nav a:hover {
+  color: orange;
+  font-size: 3rem;
 }
 .container header img {
   height: 10%;
   width: 10%;
   border-radius: 60%;
 }
-.container section {
-  background: gray;
+@media (max-width: 500px) {
+  .container header img {
+    width: 50%;
+  }
 }
-.container section .Einstein-title h1 {
-  font-size: 5rem;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  text-align: center;
-  padding-top: 10%;
-}
-.container section .top-img {
+.container .Top-kanye {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-size: 5rem;
+  font-family: 'Lacquer', sans-serif;
+  padding: 10% 0;
+  background-color: beige;
+  margin-bottom: 3%;
 }
-.container section .top-img img {
-  margin: 2% 1%;
-  height: 30%;
+.container .Top-kanye img {
   width: 70%;
 }
-.container section .top-text {
+@media (max-width: 500px) {
+  .container .Top-kanye img {
+    width: 90%;
+  }
+}
+.container .Top-kanye p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Source Code Pro', monospace;
+}
+.container .kanye-info {
+  background-color: lightblue;
   display: flex;
-  justify-content: space-between;
-}
-.container section .top-text div {
-  width: 50%;
-}
-.container section .top-text ul {
-  list-style-type: disc;
-  list-style-position: inside;
-}
-.container section .top-text h2 {
-  text-align: center;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  padding: 2%;
-}
-.container section .top-text p {
-  font-family: 'Slabo 27px', serif;
-}
-.container section .Works-title h1 {
-  font-size: 5rem;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  text-align: center;
-  padding-top: 10%;
-  padding: 5%;
-}
-.container section .middle-text {
-  display: flex;
-  justify-content: space-between;
-}
-.container section .middle-text h2 {
-  text-align: center;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  padding: 2%;
-}
-.container section .middle-text img {
-  height: 50%;
-  width: 80%;
-}
-.container section .middle-text div {
-  width: 50%;
-}
-.container section .middle-text p {
-  font-family: 'Slabo 27px', serif;
-}
-.container section .Contact-title h1 {
-  font-size: 5rem;
-  font-family: 'ZCOOL QingKe HuangYou', cursive;
-  text-align: center;
-  padding-top: 10%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-bottom: 3%;
 }
 @media (max-width: 500px) {
-  .container section .top-text {
+  .container .kanye-info {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .container section .middle-text {
+}
+.container .kanye-info div {
+  width: 40%;
+  margin-bottom: 4%;
+  line-height: 2.5rem;
+}
+@media (max-width: 500px) {
+  .container .kanye-info div {
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .container section .bottom-content form {
+}
+.container .kanye-info div:hover {
+  width: 45%;
+}
+@media (max-width: 500px) {
+  .container .kanye-info div:hover {
+    width: 70%;
+  }
+}
+.container .kanye-info div:hover h1 {
+  font-size: 2rem;
+}
+.container .kanye-info div h1 {
+  font-family: 'Lacquer', sans-serif;
+}
+.container .kanye-info div img {
+  width: 80%;
+}
+@media (max-width: 500px) {
+  .container .kanye-info div img {
+    width: 100%;
+  }
+}
+.container .bottom-content {
+  background-color: orangered;
+}
+.container .Contact-title h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding-top: 5%;
+}
+@media (max-width: 500px) {
+  .container .bottom-content form {
     display: flex;
-    flex-direction: center;
+    flex-direction: column;
+    justify-content: center;
   }
 }
